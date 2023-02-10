@@ -9,11 +9,11 @@ const ExampleComponent = () => {
 
   const API_URL = "https://api.monday.com/v2";
 
-  const API_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjIzNTQzMTk0NCwidWlkIjozOTE1Mzg1NywiaWFkIjoiMjAyMy0wMi0wOFQxMjowNDo1NS40MjlaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6MTUwNzk1NDMsInJnbiI6InVzZTEifQ.B6RAl4JoFr7XGF0ZatAnN8udxSxSJsc1MWz5-f859vc";
+  const API_KEY = "API_KEY";
 
   const queryColumns = `
     query {
-      boards (ids: [3943225207]) {
+      boards (ids: [BOARD_ID]) {
         name
         
         columns {
@@ -40,7 +40,7 @@ const ExampleComponent = () => {
 
   const queryCreate = `
   mutation {
-    create_item (board_id: 3943225207, item_name: "NEW ITEM!") {
+    create_item (board_id: BOARD_ID, item_name: "NEW ITEM!") {
     id
   } }
   `;
